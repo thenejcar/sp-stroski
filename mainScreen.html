@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SP Stroski</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/sp_stroski.css" rel="stylesheet">
+    <link rel="icon" href="../../favicon.ico">
+
+</head>
+<body>
+
+    <nav id="main_navbar" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">SP Stroski</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a id="main_user_dropdown" href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img id="main_user_avatar" src="userAvatar.jpg" class="img-rounded">
+                            Username
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"> My Profile</a></li>
+                            <li class="divider"></li>
+                            <li><a href="index.html">Log out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Izbrani Račun <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Račun 1</a></li>
+                            <li><a href="#">Račun 2</a></li>
+                            <li><a href="#">Račun 3</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Dodaj nov račun</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="settings.html"></a>
+                    </li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div id="left" class="col-md-6">
+                <div class="table-bordered">
+                    <table class="table table-striped">
+                        <thead>
+                            <th>Datum</th>
+                            <th>Namen</th>
+                            <th>Sprememba</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>11.11.2015</td>
+                                <td>Hrana</td>
+                                <td>- 15€</td>
+                            </tr>
+                            <tr>
+                                <td>12.11.2015</td>
+                                <td>Nasel na tleh</td>
+                                <td>+ 10€</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="right" class="col-md-6">right pane</div>
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
