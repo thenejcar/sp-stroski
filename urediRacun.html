@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SP Stroski</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/urediRacun.css" rel="stylesheet">
+    <link rel="icon" href="../../favicon.ico">
+
+</head>
+<body>
+
+<nav id="main_navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="mainScreen.html?id=0">SP Stroski</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a id="main_user_dropdown" href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img id="main_user_avatar" src="userAvatar.jpg" class="img-circle">
+                        Username
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"> My Profile</a></li>
+                        <li class="divider"></li>
+                        <li><a href="index.html">Log out</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="mainScreen.html?id=0">Nazaj na pregled</a>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="row">
+        <div id="left" class="col-md-4">
+            <div id="opis">
+                <h3>Urejanje Računa</h3><br/>Vnesite podatke o računu.
+            </div>
+        </div>
+        <div id="right" class="col-md-8">
+            <form role="form">
+                <div id="container_ime" class="form-group">
+                    <input type="text" id="racun_ime" placeholder="Ime računa" class="form-control input-lg"/>
+                </div>
+                <br/>
+                <div id="container_tip" class="form-group">
+                    Tip računa
+                    <select id="racun_tip" class="form-control">
+                        <option id="racun_tip_navaden" onclick="izbranTip('navaden')">Navaden račun</option>
+                        <option id="racun_tip_prihodki" onclick="izbranTip('prihodki')">Skupni prihodki</option>
+                        <option id="racun_tip_odhodki" onclick="izbranTip('odhodki')">Skupni odhodki</option>
+                    </select>
+                </div>
+                <div id="container_valuta" class="form-group">
+                    Valuta
+                    <input type="text" id="racun_valuta" class="form-control" placeholder="€"/>
+                </div>
+                <div id="container_zacetnostanje" class="form-group">
+                    Začetno stanje
+                    <input type="number" id="racun_zacetnostanje" class="form-control"/>
+                </div>
+                <div id="container_users" >
+
+                </div>
+                <div id="container_buttons" class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button type="submit" id="racun_submit" class="btn-default form-control">Shrani</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="reset" id="racun_reset" class="btn-default form-control">Počisti vnose</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="button" id="racun_cancel" class="btn-default form-control">Prekliči</button>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/urediRacun.js"></script>
+</body>
+</html>

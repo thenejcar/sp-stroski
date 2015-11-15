@@ -1,0 +1,89 @@
+body
+{
+    padding-top: 70px;
+}
+
+input
+{
+    background: white;
+    color: #2b2b2b;
+    border-radius: 0 !important;
+}
+
+select
+{
+    background: white;
+    color: #2b2b2b;
+    border-radius: 0 !important;
+}
+
+
+button .form-control
+{
+   width: 100px !important;
+}
+
+#main_user_avatar
+{
+    height: 40px;
+    width: 40px;
+}
+
+#main_user_dropdown
+{
+    padding: 4px;
+}
+
+.navbar
+{
+    background: #4caf50;
+}
+    .navbar-default .navbar-brand
+    {
+        color: #2b2b2b;
+    }
+    .navbar-default .navbar-brand:hover
+    {
+        color: #2b2b2b;
+        background: #81c784;
+    }
+    .navbar .nav > li > a
+    {
+        color: #2b2b2b;
+    }
+
+    .navbar .nav > li > a:hover
+    {
+        color: #2b2b2b;
+        background: #81c784;
+    }
+
+    .navbar .nav > li > a:active
+    {
+        color: #2b2b2b;
+    }
+
+        .navbar .nav > li > ul, .navbar .nav > li > ul > li
+        {
+            background: #81c784;
+            color: #2b2b2b;
+        }
+    .navbar .nav > li > ul > li
+    {
+        background: #81c784;
+        color: #2b2b2b;
+    }
+
+.form-group:hover, .form-group:focus
+{
+    background: #81c784;
+}
+
+.form-group
+{
+    padding: 4px
+}
+
+
+
+

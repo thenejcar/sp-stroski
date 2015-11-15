@@ -6,7 +6,7 @@
     <title>SP Stroski</title>
 
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/sp_stroski.css" rel="stylesheet">
+    <link href="css/mainScreen.css" rel="stylesheet">
     <link rel="icon" href="../../favicon.ico">
 
 </head>
@@ -27,7 +27,7 @@
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
                         <a id="main_user_dropdown" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img id="main_user_avatar" src="userAvatar.jpg" class="img-rounded">
+                            <img id="main_user_avatar" src="userAvatar.jpg" class="img-circle">
                             Username
                             <span class="caret"></span>
                         </a>
@@ -40,18 +40,18 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Izbrani Račun <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Račun 1 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Račun 1</a></li>
-                            <li><a href="#">Račun 2</a></li>
-                            <li><a href="#">Račun 3</a></li>
+                            <li class="active" id="racun0" ><a onclick="izbranRacun(0)">Račun 1</a></li>
+                            <li id="racun_1"><a onclick="izbranRacun(1)">Račun 2</a></li>
+                            <li id="racun_2"><a onclick="izbranRacun(2)">Skupni Račun 1</a></li>
+                            <li id="racun_3"><a onclick="izbranRacun(3)">Skupni Račun 2</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#">Dodaj nov račun</a></li>
-
+                            <li><a href="urediRacun.html?id=-1">Dodaj nov račun</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="settings.html"></a>
+                        <a href="urediRacun.html?id=0">Nastavitve računa</a>
                     </li>
                 </ul>
             </div><!--/.nav-collapse -->
@@ -79,16 +79,37 @@
                                 <td>Nasel na tleh</td>
                                 <td>+ 10€</td>
                             </tr>
+                            <tr>
+                                <td>11.11.2015</td>
+                                <td>Hrana</td>
+                                <td>- 15€</td>
+                            </tr>
+                            <tr>
+                                <td>12.11.2015</td>
+                                <td>Nasel na tleh</td>
+                                <td>+ 10€</td>
+                            </tr>
+                            <tr>
+                                <td>11.11.2015</td>
+                                <td>Hrana</td>
+                                <td>- 15€</td>
+                            </tr>
+                            <tr>
+                                <td>12.11.2015</td>
+                                <td>Nasel na tleh</td>
+                                <td>+ 10€</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-            <div id="right" class="col-md-6">right pane</div>
+            <div id="right" class="col-md-6">TUKAJ JE GRAF</div>
         </div>
 
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/mainScreen.js"></script>
 </body>
 </html>

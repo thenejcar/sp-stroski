@@ -1,0 +1,60 @@
+body
+{
+    padding-top: 70px;
+}
+
+#main_user_avatar
+{
+    height: 40px;
+    width: 40px;
+}
+
+#main_user_dropdown
+{
+    padding: 4px;
+}
+
+.navbar
+{
+    background: #4caf50;
+}
+    .navbar-default .navbar-brand
+    {
+        color:#0f0f0f;
+    }
+    .navbar-default .navbar-brand:hover
+    {
+        color:#0f0f0f;
+        background: #81c784;
+    }
+    .navbar .nav > li > a
+    {
+        color:#0f0f0f;
+    }
+
+    .navbar .nav > li > a:hover
+    {
+        color:#0f0f0f;
+        background: #81c784;
+    }
+
+    .navbar .nav > li > a:active
+    {
+        color:#0f0f0f;
+    }
+
+        .navbar .nav > li > ul, .navbar .nav > li > ul > li
+        {
+            background: #81c784;
+            color:#0f0f0f;
+        }
+    .navbar .nav > li > ul > li
+    {
+        background: #81c784;
+        color:#0f0f0f;
+    }
+
+
+
+
+
