@@ -18,7 +18,7 @@ select
 }
 
 
-button .form-control
+.btn .form-control
 {
    width: 100px !important;
 }
