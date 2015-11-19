@@ -13,4 +13,4 @@ Uporabljene knjiznice:<br/>
 https://github.com/twbs/bootstrap   (MIT license)</br>
 https://github.com/nnnick/Chart.js  (MIT license)</br>
 https://github.com/eternicode/bootstrap-datepicker  (Apache license)
-</p
+</p>
