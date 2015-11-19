@@ -1,4 +1,4 @@
-<h1>SP Stroski</h1
+<h1>SP Stroski</h1>
 <h3>Spletna aplikacija, ki vam pomaga spremljati porabo denarja</h3>
 
 
