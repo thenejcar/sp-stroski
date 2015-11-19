@@ -6,170 +6,286 @@
     <title>SP Stroski</title>
 
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.min.css"
+          rel="stylesheet" type="text/css"/>
     <link href="css/mainScreen.css" rel="stylesheet">
     <link rel="icon" href="../../favicon.ico">
 
 </head>
 <body>
 
-    <nav id="main_navbar" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-full">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">SP Stroski</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a id="main_user_dropdown" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img id="main_user_avatar" src="userAvatar.jpg" class="img-circle">
-                            Username
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#"> My Profile</a></li>
-                            <li class="divider"></li>
-                            <li><a href="index.html">Log out</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Račun 1 <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li class="active" id="racun0" ><a onclick="izbranRacun(0)">Račun 1</a></li>
-                            <li id="racun_1"><a onclick="izbranRacun(1)">Račun 2</a></li>
-                            <li id="racun_2"><a onclick="izbranRacun(2)">Skupni Račun 1</a></li>
-                            <li id="racun_3"><a onclick="izbranRacun(3)">Skupni Račun 2</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="urediRacun.html?id=-1">Dodaj nov račun</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="urediRacun.html?id=0">Nastavitve računa</a>
-                    </li>
-                </ul>
-            </div><!--/.nav-collapse -->
-        </div>
-    </nav>
-
+<nav id="main_navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container-full">
-        <div class = row>
-
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">SP Stroski</a>
         </div>
-        <div class="row">
-            <div id="left" class="col-md-6">
-                <div class="row">
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a id="main_user_dropdown" href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img id="main_user_avatar" src="userAvatar.jpg" class="img-circle">
+                        Username
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"> My Profile</a></li>
+                        <li class="divider"></li>
+                        <li><a href="index.html">Log out</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Račun 1 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li class="active" id="racun0"><a onclick="izbranRacun(0)">Račun 1</a></li>
+                        <li id="racun_1"><a onclick="izbranRacun(1)">Račun 2</a></li>
+                        <li id="racun_2"><a onclick="izbranRacun(2)">Skupni Račun 1</a></li>
+                        <li id="racun_3"><a onclick="izbranRacun(3)">Skupni Račun 2</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="urediRacun.html?id=-1">Dodaj nov račun</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="urediRacun.html?id=0">Nastavitve računa</a>
+                </li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</nav>
 
-                </div>
-                <div class="table-bordered">
-                    <table class="table table-striped">
-                        <thead>
-                            <th>Datum</th>
-                            <th>Namen</th>
-                            <th>Kategorija</th>
-                            <th>Sprememba</th>
-                            <th>Stanje</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>11.11.2015</td>
-                                <td>Hrana</td>
-                                <td>Hrana</td>
-                                <td>- 15€</td>
-                                <td>- 15€</td>
-                            </tr>
-                            <tr>
-                                <td>12.11.2015</td>
-                                <td>Nasel na tleh</td>
-                                <td>Drugo</td>
-                                <td>+25€</td>
-                                <td>10€</td>
-                            </tr>
-                            <tr>
-                                <td>13.11.2015</td>
-                                <td>Hrana</td>
-                                <td>Hrana</td>
-                                <td>- 5€</td>
-                                <td>5€</td>
-                            </tr>
-                            <tr>
-                                <td>14.11.2015</td>
-                                <td>Nasel na tleh</td>
-                                <td>Drugo</td>
-                                <td>+20€</td>
-                                <td>25€</td>
-                            </tr>
-                            <tr>
-                                <td>15.11.2015</td>
-                                <td>Hrana</td>
-                                <td>Hrana</td>
-                                <td>- 10€</td>
-                                <td>15€</td>
-                            </tr>
-                            <tr>
-                                <td>16.11.2015</td>
-                                <td>Nasel na tleh</td>
-                                <td>Drugo</td>
-                                <td>+10€</td>
-                                <td>25€</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div id="mesec_container" class=" row">
+<div class="container-full">
+    <div class=row>
+
+    </div>
+    <div class="row">
+        <div id="left" class="col-md-6">
+            <div id="left_filters" class="row form inline">
+                <div class="form-inline">
+                    <div id="kategorija_container" class="form-group col-md-4">
+                        Kategorija
+                        <select id="kategorija_dropdown" class="dropdown form-control">
+                            <option id="kategorija0">Vse kategorije</option>
+                            <option id="kategorija1">Hrana</option>
+                            <option id="kategorija2">Drugo</option>
+                        </select>
+                    </div>
                     <div class="col-md-2"></div>
-                    <div class="col-md-1">
-                        <button id="mesec_levo" class="btn btn-default btn-leftRight">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
+                    <div id="search_container" class="form-group col-md-6">
+                        Išči
+                        <input type="text" class="form-control">
+                        <button id="search_btn" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>
                         </button>
                     </div>
-                    <div class="col-md-6">
-                        <div class='input-group date' id='datepicker'>
-                            <input type='text' class="form-control" />
+                </div>
+            </div>
+            <div class="table-bordered">
+                <table class="table table-striped header-fixed">
+                    <thead>
+                    <th>Datum</th>
+                    <th>Namen</th>
+                    <th>Kategorija</th>
+                    <th>Sprememba</th>
+                    <th>Stanje</th>
+                    </thead>
+                    <tbody id="tabela_body">
+                    <tr>
+                        <td>11.11.2015</td>
+                        <td>Hrana</td>
+                        <td>Hrana</td>
+                        <td>-15€</td>
+                        <td>-15€</td>
+                    </tr>
+                    <tr>
+                        <td>12.11.2015</td>
+                        <td>Nasel na tleh</td>
+                        <td>Drugo</td>
+                        <td>+25€</td>
+                        <td>10€</td>
+                    </tr>
+                    <tr>
+                        <td>13.11.2015</td>
+                        <td>Hrana</td>
+                        <td>Hrana</td>
+                        <td>-5€</td>
+                        <td>5€</td>
+                    </tr>
+                    <tr>
+                        <td>14.11.2015</td>
+                        <td>Nasel na tleh</td>
+                        <td>Drugo</td>
+                        <td>+20€</td>
+                        <td>25€</td>
+                    </tr>
+                    <tr>
+                        <td>15.11.2015</td>
+                        <td>Hrana</td>
+                        <td>Hrana</td>
+                        <td>-10€</td>
+                        <td>15€</td>
+                    </tr>
+                    <tr>
+                        <td>16.11.2015</td>
+                        <td>Nasel na tleh</td>
+                        <td>Drugo</td>
+                        <td>+10€</td>
+                        <td>25€</td>
+                    </tr>
+                    <tr>
+                        <td>17.11.2015</td>
+                        <td>Nasel na tleh</td>
+                        <td>Drugo</td>
+                        <td>+20€</td>
+                        <td>45€</td>
+                    </tr>
+                    <tr>
+                        <td>18.11.2015</td>
+                        <td>Hrana</td>
+                        <td>Hrana</td>
+                        <td>-50€</td>
+                        <td>-5€</td>
+                    </tr>
+                    <tr>
+                        <td>19.11.2015</td>
+                        <td>Nasel na tleh</td>
+                        <td>Drugo</td>
+                        <td>+10€</td>
+                        <td>5€</td>
+                    </tr>
+                    <tr>
+                        <td>20.11.2015</td>
+                        <td>Nasel na tleh</td>
+                        <td>Drugo</td>
+                        <td>+20€</td>
+                        <td>25€</td>
+                    </tr>
+                    <tr>
+                        <td>21.11.2015</td>
+                        <td>Hrana</td>
+                        <td>Hrana</td>
+                        <td>-10€</td>
+                        <td>15€</td>
+                    </tr>
+                    <tr>
+                        <td>22.11.2015</td>
+                        <td>Nasel na tleh</td>
+                        <td>Drugo</td>
+                        <td>+15€</td>
+                        <td>30€</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="mesec_container" class=" row">
+                <div class="col-md-2"></div>
+                <div class="col-md-1">
+                    <button id="mesec_levo" class="btn btn-default btn-leftRight">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </button>
+                </div>
+                <div class="col-md-6">
+                    <div class='input-group date' id='datepicker'>
+                        <input type='text' class="form-control"/>
                             <span class="input-group-addon">
                                 <span href="" class="glyphicon glyphicon-calendar"></span>
                             </span>
-                        </div>
                     </div>
-                    <div class="col-md-1">
-                        <button id="mesec_desno" class="btn btn-default">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                        </button>
-                    </div>
-                    <div class="col-md-2"></div>
                 </div>
-            </div>
-            <div id="right" class="col-md-6">
-                <ul id="right_tabs" class="nav nav-tabs">
-                    <li class="active"><a href="#chart_container" id="tab_graf">Graf</a></li>
-                    <li><a href="#statistika_container" id="tab_statistika">Statistika</a></li>
-                </ul>
-                <div id="chart_container" class="tab-content">
-                    <canvas id="chart" height="600px">
-                        Canvas not supported
-                    </canvas>
+                <div class="col-md-1">
+                    <button id="mesec_desno" class="btn btn-default">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </button>
                 </div>
-                <div id="statistika_container" class="tab-content">
-                    TOLE JE STATISTIKA
-                </div>
+                <div class="col-md-2"></div>
             </div>
         </div>
-
+        <div id="right" class="col-md-6">
+            <ul id="right_tabs" class="nav nav-tabs">
+                <li class="active"><a href="#chart_container" id="tab_graf">Graf</a></li>
+                <li><a href="#statistika_container" id="tab_statistika">Statistika</a></li>
+            </ul>
+            <div id="chart_container" class="tab-content">
+                <canvas id="chart" height="600px">
+                    Canvas not supported
+                </canvas>
+            </div>
+            <div id="statistika_container" class="tab-content">
+                <table id="statistika_tabela" class="table-statistika">
+                    <tr>
+                        <td><h3 class="statistika_titles" id="statistika_title_m">November 2015</h3></td>
+                        <td></td>
+                        <td><h3 class="statistika_titles" id="statistika_title_t">Skupaj</h3></td>
+                    </tr>
+                    <tr>
+                        <td>Prihodki:</td>
+                        <td>
+                            <div class="statistika_stevilke" id="statistika_prihodki">120€</div>
+                        </td>
+                        <td>
+                            <div class="statistika_stevilke" id="statistika_prihodki_t">250€</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Odhodki:</td>
+                        <td>
+                            <div class="statistika_stevilke" id="statistika_odhodki">90€</div>
+                        </td>
+                        <td>
+                            <div class="statistika_stevilke" id="statistika_odhodki_t">180€</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="line"></td>
+                        <td class="line"></td>
+                        <td class="line"></td>
+                    </tr>
+                    <tr>
+                        <td>Skupaj:</td>
+                        <td>
+                            <div class="statistika_stevilke" id="statistika_skupaj">+30€</div>
+                        </td>
+                        <td>
+                            <div class="statistika_stevilke" id="statistika_skupaj_t">+70€</div>
+                        </td>
+                    </tr>
+                </table>
+                <br/>
+                <ul id="cilji_seznam"><h3>Aktivni cilji:</h3>
+                    <li id="cilj0" class="cilji dosezeni">
+                        Prihrani vsaj 10€ do konca meseca (November 2015)
+                    </li>
+                    <li id="cilj1" class="cilji nedosezeni">
+                        Prihrani vsaj 100€ do konca leta (2015)
+                    </li>
+                    <li id="cilj2" class="cilji dosezeni">
+                        Zasluzi vsaj 100€ do konca meseca (November 2015)
+                    </li>
+                    <li id="cilj0" class="cilji dosezeni">
+                        Prihrani vsaj 10€ do konca meseca (November 2015)
+                    </li>
+                </ul>
+                <br/>
+            </div>
+        </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+</div>
+<br/>
 
-    <script src="js/mainScreen.js"></script>
-    <script src="js/Chart.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+
+<script src="js/mainScreen.js"></script>
+<script src="js/Chart.js"></script>
 
 </body>
 </html>
