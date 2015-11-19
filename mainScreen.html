@@ -6,6 +6,7 @@
     <title>SP Stroski</title>
 
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
     <link href="css/mainScreen.css" rel="stylesheet">
     <link rel="icon" href="../../favicon.ico">
 
@@ -59,6 +60,9 @@
     </nav>
 
     <div class="container-full">
+        <div class = row>
+
+        </div>
         <div class="row">
             <div id="left" class="col-md-6">
                 <div class="row">
@@ -69,6 +73,7 @@
                         <thead>
                             <th>Datum</th>
                             <th>Namen</th>
+                            <th>Kategorija</th>
                             <th>Sprememba</th>
                             <th>Stanje</th>
                         </thead>
@@ -76,51 +81,83 @@
                             <tr>
                                 <td>11.11.2015</td>
                                 <td>Hrana</td>
+                                <td>Hrana</td>
                                 <td>- 15€</td>
                                 <td>- 15€</td>
                             </tr>
                             <tr>
                                 <td>12.11.2015</td>
                                 <td>Nasel na tleh</td>
-                                <td>+ 25€</td>
-                                <td>+ 10€</td>
+                                <td>Drugo</td>
+                                <td>+25€</td>
+                                <td>10€</td>
                             </tr>
                             <tr>
                                 <td>13.11.2015</td>
                                 <td>Hrana</td>
-                                <td>-  5€</td>
-                                <td>+  5€</td>
+                                <td>Hrana</td>
+                                <td>- 5€</td>
+                                <td>5€</td>
                             </tr>
                             <tr>
                                 <td>14.11.2015</td>
                                 <td>Nasel na tleh</td>
-                                <td>+ 20€</td>
-                                <td>+ 25€</td>
+                                <td>Drugo</td>
+                                <td>+20€</td>
+                                <td>25€</td>
                             </tr>
                             <tr>
                                 <td>15.11.2015</td>
                                 <td>Hrana</td>
+                                <td>Hrana</td>
                                 <td>- 10€</td>
-                                <td>+ 15€</td>
+                                <td>15€</td>
                             </tr>
                             <tr>
                                 <td>16.11.2015</td>
                                 <td>Nasel na tleh</td>
-                                <td>+ 10€</td>
-                                <td>+ 25€</td>
+                                <td>Drugo</td>
+                                <td>+10€</td>
+                                <td>25€</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
+                <div id="mesec_container" class=" row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-1">
+                        <button id="mesec_levo" class="btn btn-default btn-leftRight">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </button>
+                    </div>
+                    <div class="col-md-6">
+                        <div class='input-group date' id='datepicker'>
+                            <input type='text' class="form-control" />
+                            <span class="input-group-addon">
+                                <span href="" class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <button id="mesec_desno" class="btn btn-default">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </button>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
             </div>
             <div id="right" class="col-md-6">
                 <ul id="right_tabs" class="nav nav-tabs">
-                    <li class="active"><a href="#" id="tab_graf">Graf</a></li>
-                    <li><a href="#" id="tab_statistika">Statistika</a></li>
+                    <li class="active"><a href="#chart_container" id="tab_graf">Graf</a></li>
+                    <li><a href="#statistika_container" id="tab_statistika">Statistika</a></li>
                 </ul>
-                <div id="chart_container">
+                <div id="chart_container" class="tab-content">
                     <canvas id="chart" height="600px">
+                        Canvas not supported
                     </canvas>
+                </div>
+                <div id="statistika_container" class="tab-content">
+                    TOLE JE STATISTIKA
                 </div>
             </div>
         </div>
@@ -129,7 +166,10 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+
     <script src="js/mainScreen.js"></script>
     <script src="js/Chart.js"></script>
+
 </body>
 </html>

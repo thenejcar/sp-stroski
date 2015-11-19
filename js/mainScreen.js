@@ -1,6 +1,13 @@
 $(document).ready(function()
 {
     drawChart()
+
+    $("#datepicker").datepicker( {
+        format: "mm-yyyy",
+        startView: "months",
+        minViewMode: "months",
+        autoclose: true
+    }).datepicker("update", new Date()).on('changeDate', function(){updateDate()})
 });
 
 $( window ).resize(function()
@@ -31,3 +38,13 @@ function drawChart()
     var ctx = $("#chart").get(0).getContext("2d");
     var chart = new Chart(ctx).Line(data, {bezierCurve: false});
 }
+
+function updateDate()
+{
+    //TODO
+    console.log("this will update the list")
+}
+
+
+
+
