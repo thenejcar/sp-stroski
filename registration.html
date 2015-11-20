@@ -2,37 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SP stroski Login</title>
+    <title>SP stroski Registracija</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/login.css" rel="stylesheet">
     <link rel="icon" href="../../favicon.ico">
 </head>
 <body>
 <div class="outer-container">
-    <h1>SP Stroški</h1>
-    <br/>
-    <h4>Spletna aplikacija, ki vam pomaga spremljati porabo denarja</h4>
-    <br/>
-    <div id="login_container" class="container">
-        <form id="login_form" class="form-group">
-            <h2>Prijava</h2>
+    <h2 class="main-title">Registracija</h2>
+    <div id="registracija_container" class="container">
+        <form id="registracija_form" class="form-group">
+            Ime
+            <input id="registracija_firstname" type="text" class="form-control" placeholder="ime"/>
+            Priimek
+            <input id="registracija_lastname" type="text" class="form-control" placeholder="priimek"/>
             Uporabnisko ime
-            <input id="login_username" type="text" class="form-control" placeholder="username"/>
+            <input id="registracija_username" type="text" class="form-control" placeholder="uporabnisko ime"/>
             Geslo
-            <input id="login_password" type="password" class="form-control " placeholder="password"/>
+            <input id="registracija_password" type="password" class="form-control " placeholder="geslo"/>
+            Ponovi geslo
+            <input id="registracija_password_repeat" type="password" class="form-control " placeholder="ponovi geslo"/>
+            Slika
+            <div class="row">
+                <div class="col-md-6">
+                <span class="btn btn-default btn-file form-control">
+                    <input id="registracija_image_upload" type="file"/>
+                </span>
+                </div>
+                <div class="col-md-6">
+                    <img id="registracija_image" alt=""/>
+                </div>
+            </div>
             <br/>
-            <a href="mainScreen.html#tab_stats" id="login_submit" type="submit" class="btn btn-default">
-                Log in
+            <a href="index.html" id="registracija_submit" type="submit" class="btn btn-default">
+                Registriraj se
             </a>
         </form>
-        <a id="login_registracija" href="registration.html">
-            Registracija
-        </a>
     </div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/login.js"></script>
+<script src="js/registration.js"></script>
 </body>
 </html>
