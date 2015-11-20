@@ -3,6 +3,12 @@ body
     padding-top: 70px;
 }
 
+.container-full
+{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
 #main_user_avatar
 {
     height: 40px;
@@ -54,12 +60,85 @@ body
         color:#0f0f0f;
     }
 
-
-.tab-content {
-    display: none;
-}
-.tab-content:target {
+article.tabs
+{
+    position: relative;
     display: block;
+    width: 100%;
+    height: 15em;
+    margin: 2em auto;
+}
+article.tabs > section
+{
+    position: absolute;
+    display: block;
+    top: 1.8em;
+    left: 0;
+    background-color: #ddd;
+    border: 1px solid #d0d0d0;
+    z-index: 0;
+    visibility: hidden;
+}
+article.tabs > section:first-child
+{
+    z-index: 1;
+}
+article.tabs > section > h2
+{
+    position: absolute;
+    font-size: 1em;
+    font-weight: normal;
+    width: 120px;
+    height: 1.8em;
+    top: -1.8em;
+    left: 10px;
+    padding: 0;
+    margin: 0;
+    color: #999;
+    background-color: #ddd;
+    visibility: visible;
+}
+article.tabs > section:nth-child(2) h2
+{
+    left: 132px;
+}
+article.tabs > section > h2 > a
+{
+    display: block;
+    width: 100%;
+    line-height: 1.8em;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    outline: 0 none;
+}
+article.tabs section:target
+{
+    color:#0f0f0f;
+    background-color: white;
+    z-index: 2;
+    width: 100%;
+    height: 600px;
+    visibility: visible;
+}
+article.tabs section:target h2
+{
+    color:#0f0f0f;
+    background-color: #4caf50;
+    z-index: 2;
+    visibility: visible;
+}
+#chart_container
+{
+    width: 100%;
+    height: 100%;
+    padding-right: 10px;
+}
+#statistika_container
+{
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
 }
 
 .form-control
@@ -84,18 +163,6 @@ body
 .nav > li > a
 {
     color: #4caf50;
-}
-
-#chart_container
-{
-    width: 100%;
-    height: 100%;
-}
-
-.container-full
-{
-    margin-left: 40px;
-    margin-right: 40px;
 }
 
 #mesec_container
@@ -182,15 +249,6 @@ body
     height: 100%;
 }
 
-#canvas_container
-{
-    border: 1px solid #d0d0d0;
-}
-#statistika_container
-{
-    border: 1px solid #d0d0d0;
-    padding-left: 24px;
-}
 #statistika_title_t
 {
     text-align: right;

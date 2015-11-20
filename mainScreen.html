@@ -208,72 +208,78 @@
             </div>
         </div>
         <div id="right" class="col-md-6">
-            <ul id="right_tabs" class="nav nav-tabs">
-                <li class="active"><a href="#chart_container" id="tab_graf">Graf</a></li>
-                <li><a href="#statistika_container" id="tab_statistika">Statistika</a></li>
-            </ul>
-            <div id="chart_container" class="tab-content">
-                <canvas id="chart" height="600px">
-                    Canvas not supported
-                </canvas>
-            </div>
-            <div id="statistika_container" class="tab-content">
-                <table id="statistika_tabela" class="table-statistika">
-                    <tr>
-                        <td><h3 class="statistika_titles" id="statistika_title_m">November 2015</h3></td>
-                        <td></td>
-                        <td><h3 class="statistika_titles" id="statistika_title_t">Skupaj</h3></td>
-                    </tr>
-                    <tr>
-                        <td>Prihodki:</td>
-                        <td>
-                            <div class="statistika_stevilke" id="statistika_prihodki">120€</div>
-                        </td>
-                        <td>
-                            <div class="statistika_stevilke" id="statistika_prihodki_t">250€</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Odhodki:</td>
-                        <td>
-                            <div class="statistika_stevilke" id="statistika_odhodki">90€</div>
-                        </td>
-                        <td>
-                            <div class="statistika_stevilke" id="statistika_odhodki_t">180€</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="line"></td>
-                        <td class="line"></td>
-                        <td class="line"></td>
-                    </tr>
-                    <tr>
-                        <td>Skupaj:</td>
-                        <td>
-                            <div class="statistika_stevilke" id="statistika_skupaj">+30€</div>
-                        </td>
-                        <td>
-                            <div class="statistika_stevilke" id="statistika_skupaj_t">+70€</div>
-                        </td>
-                    </tr>
-                </table>
-                <br/>
-                <ul id="cilji_seznam"><h3>Aktivni cilji:</h3>
-                    <li id="cilj0" class="cilji dosezeni">
-                        Prihrani vsaj 10€ do konca meseca (November 2015)
-                    </li>
-                    <li id="cilj1" class="cilji nedosezeni">
-                        Prihrani vsaj 100€ do konca leta (2015)
-                    </li>
-                    <li id="cilj2" class="cilji dosezeni">
-                        Zasluzi vsaj 100€ do konca meseca (November 2015)
-                    </li>
-                    <li id="cilj0" class="cilji dosezeni">
-                        Prihrani vsaj 10€ do konca meseca (November 2015)
-                    </li>
-                </ul>
-                <br/>
-            </div>
+            <article id="right_tabs" class="tabs">
+                <section id="tab_chart">
+                    <h2><a href="#tab_chart" id="tab_chart_link">Graf</a></h2>
+
+                    <div id="chart_container">
+                        <canvas id="chart" height="600px">
+                            Canvas not supported
+                        </canvas>
+                    </div>
+                </section>
+                <section id="tab_stats">
+                    <h2><a href="#tab_stats" id="tab_statistika_link">Statistika</a></h2>
+
+                    <div id="statistika_container">
+                        <table id="statistika_tabela" class="table-statistika">
+                            <tr>
+                                <td><h3 class="statistika_titles" id="statistika_title_m">November 2015</h3></td>
+                                <td></td>
+                                <td><h3 class="statistika_titles" id="statistika_title_t">Skupaj</h3></td>
+                            </tr>
+                            <tr>
+                                <td>Prihodki:</td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_prihodki">120€</div>
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_prihodki_t">250€</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Odhodki:</td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_odhodki">90€</div>
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_odhodki_t">180€</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="line"></td>
+                                <td class="line"></td>
+                                <td class="line"></td>
+                            </tr>
+                            <tr>
+                                <td>Skupaj:</td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_skupaj">+30€</div>
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_skupaj_t">+70€</div>
+                                </td>
+                            </tr>
+                        </table>
+                        <br/>
+                        <ul id="cilji_seznam"><h3>Aktivni cilji:</h3>
+                            <li id="cilj0" class="cilji dosezeni">
+                                Prihrani vsaj 10€ do konca meseca (November 2015)
+                            </li>
+                            <li id="cilj1" class="cilji nedosezeni">
+                                Prihrani vsaj 100€ do konca leta (2015)
+                            </li>
+                            <li id="cilj2" class="cilji dosezeni">
+                                Zasluzi vsaj 100€ do konca meseca (November 2015)
+                            </li>
+                            <li id="cilj3" class="cilji dosezeni">
+                                Prihrani vsaj 10€ do konca meseca (November 2015)
+                            </li>
+                        </ul>
+                        <br/>
+                    </div>
+                </section>
+            </article>
         </div>
     </div>
 
