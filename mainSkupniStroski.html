@@ -24,7 +24,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#tab_stats">SP Stroški</a>
+            <a class="navbar-brand" href="mainScreen.html#tab_stats">SP Stroški</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -74,14 +74,24 @@
                             <option id="kategorija0">Vse kategorije</option>
                             <option id="kategorija1">Hrana</option>
                             <option id="kategorija2">Drugo</option>
+                            <option id="kategorija3">Avto</option>
+                            <option id="kategorija4">Vplačilo</option>
+                            <option id="kategorija5">Povračilo</option>
                         </select>
                     </div>
-                    <div class="col-md-2"></div>
-                    <div id="search_container" class="form-group col-md-6">
-                        Išči
-                        <input type="text" class="form-control">
-                        <button id="search_btn" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>
-                        </button>
+                    <div id="uporabniki_container" class="form-group col-md-4">
+                        Uporabniki
+                        <select id="uporabniki_dropdown" class="dropdown form-control">
+                            <option id="uporabniki_vsi">Vsi uporabniki</option>
+                            <option id="uporabnik0">asterix2</option>
+                            <option id="uporabnik1">cveto2010</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <a id="dodaj_vnos" href="urediVnos.html" class="btn btn-default form-control">
+                            Dodaj nov vnos
+                            <span class="glyphicon glyphicon-plus-sign"></span>
+                        </a>
                     </div>
                 </div>
             </div>
