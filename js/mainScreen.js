@@ -1,3 +1,6 @@
+var chart;
+var canvas;
+
 $(document).ready(function()
 {
     drawChart()
@@ -12,11 +15,14 @@ $(document).ready(function()
 
 $( window ).resize(function()
 {
-    drawChart();
+    console.log("resize chart")
+    canvas = document.getElementById("chart");
+    canvas.width = $("#right_tabs").width();
 });
 
 function drawChart()
 {
+    console.log("drawing chart")
     var canvas = document.getElementById("chart");
     canvas.width = $("#right").width();
 
@@ -38,7 +44,8 @@ function drawChart()
             }]
     };
     var ctx = $("#chart").get(0).getContext("2d");
-    var chart = new Chart(ctx).Line(data, {bezierCurve: false});
+    if(chart == undefined)
+    chart = new Chart(ctx).Line(data, {bezierCurve: false});
 }
 
 function updateDate()
@@ -46,7 +53,6 @@ function updateDate()
     //TODO
     console.log("this will update the list")
 }
-
 
 
 
