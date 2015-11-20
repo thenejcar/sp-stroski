@@ -2,18 +2,17 @@ var chart;
 var canvas;
 var data =
 {
-    labels: ["11.11.2015", "12.11.2015", "13.11.2015", "14.11.2015", "15.11.2015", "16.11.2015",
-        "17.11.2015", "18.11.2015", "19.11.2015", "20.11.2015", "21.11.2015", "22.11.2015"],
+    labels: ["11.11.2015", "12.11.2015", "13.11.2015"],
     datasets: [
         {
-            label: "Račun 1",
+            label: "Skupni Račun 2",
             fillColor: "rgba(76,175,80,0.2)",
             strokeColor: "rgba(76,175,80,0.9)",
             pointColor: "rgba(76,175,80,1)",
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(220,220,220,1)",
-            data: [-15, 10, 5, 25, 15, 25, 45, -5, 5, 25, 15, 30]
+            data: [20, 5, 0, ]
         }
     ]
 };
@@ -25,15 +24,15 @@ $(document).ready(function () {
     drawChart()
 
     $("#datepicker").datepicker(
-        {
-            format: "MM yyyy",
-            startView: "months",
-            minViewMode: "months",
-            autoclose: true
-        }).datepicker("update", new Date()).on('changeDate', function ()
-        {
-            updateDate()
-        })
+    {
+        format: "MM yyyy",
+        startView: "months",
+        minViewMode: "months",
+        autoclose: true
+    }).datepicker("update", new Date()).on('changeDate', function ()
+    {
+        updateDate()
+    })
 });
 
 function updateDate() {
@@ -96,13 +95,13 @@ function drawChart() {
             bezierCurve: false,
             multiTooltipTemplate: "<%= datasetLabel %>: <%= value %>",
             limitLines:
-                [
-                    {
-                        label: '',
-                        value: 0,
-                        color: 'rgba(15, 15, 15, 0.8)',
-                    },
-                ],
+            [
+                {
+                    label: '',
+                    value: 0,
+                    color: 'rgba(15, 15, 15, 0.8)',
+                },
+            ],
         });
 }
 

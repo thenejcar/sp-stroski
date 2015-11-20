@@ -6,7 +6,7 @@ var data =
         "17.11.2015", "18.11.2015", "19.11.2015", "20.11.2015", "21.11.2015", "22.11.2015"],
     datasets: [
         {
-            label: "Račun 1",
+            label: "Skupni Račun 1",
             fillColor: "rgba(76,175,80,0.2)",
             strokeColor: "rgba(76,175,80,0.9)",
             pointColor: "rgba(76,175,80,1)",
@@ -14,6 +14,26 @@ var data =
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(220,220,220,1)",
             data: [-15, 10, 5, 25, 15, 25, 45, -5, 5, 25, 15, 30]
+        },
+        {
+            label: "asterix2",
+            fillColor: "rgba(205,220,57,0)",
+            strokeColor: "rgba(205,220,57,0.9)",
+            pointColor: "rgba(205,220,57,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: [-15, 10, 10, 10, 10, 20, 20, -30, -20, -20, -20, -20]
+        },
+        {
+            label: "cveto2010",
+            fillColor: "rgba(3,169,244,0)",
+            strokeColor: "rgba(3,169,244,0.9)",
+            pointColor: "rgba(3,169,244,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: [0, 0, -5, 15, 5, 5, 25, 25, 25, 45, 35, 50]
         }
     ]
 };
@@ -25,15 +45,15 @@ $(document).ready(function () {
     drawChart()
 
     $("#datepicker").datepicker(
-        {
-            format: "MM yyyy",
-            startView: "months",
-            minViewMode: "months",
-            autoclose: true
-        }).datepicker("update", new Date()).on('changeDate', function ()
-        {
-            updateDate()
-        })
+    {
+        format: "MM yyyy",
+        startView: "months",
+        minViewMode: "months",
+        autoclose: true
+    }).datepicker("update", new Date()).on('changeDate', function ()
+    {
+        updateDate()
+    })
 });
 
 function updateDate() {
@@ -96,13 +116,13 @@ function drawChart() {
             bezierCurve: false,
             multiTooltipTemplate: "<%= datasetLabel %>: <%= value %>",
             limitLines:
-                [
-                    {
-                        label: '',
-                        value: 0,
-                        color: 'rgba(15, 15, 15, 0.8)',
-                    },
-                ],
+            [
+                {
+                    label: '',
+                    value: 0,
+                    color: 'rgba(15, 15, 15, 0.8)',
+                },
+            ],
         });
 }
 

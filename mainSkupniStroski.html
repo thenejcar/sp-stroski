@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SP Stroski</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.min.css"
+          rel="stylesheet" type="text/css"/>
+    <link href="css/mainScreen.css" rel="stylesheet">
+    <link rel="icon" href="../../favicon.ico">
+
+</head>
+<body>
+
+<nav id="main_navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-full">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#tab_stats">SP Stroski</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a id="main_user_dropdown" href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img id="main_user_avatar" src="asterix2_small.jpg" class="img-circle">
+                        asterix2
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="mojProfil.html"> Moj profil</a></li>
+                        <li class="divider"></li>
+                        <li><a href="index.html">Odjava</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Skupni Račun 2<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li id="racun0"><a href="mainScreen.html#tab_stats">Račun 1</a></li>
+                        <li id="racun1"><a href="mainSkupniPrihodki.html#tab_stats">Skupni Račun 1</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="urediRacun.html">Dodaj nov račun</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="urediRacun.html">Nastavitve računa</a>
+                </li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div class="container-full">
+    <div class=row>
+
+    </div>
+    <div class="row">
+        <div id="left" class="col-md-6">
+            <div id="left_filters" class="row form inline">
+                <div class="form-inline">
+                    <div id="kategorija_container" class="form-group col-md-4">
+                        Kategorija
+                        <select id="kategorija_dropdown" class="dropdown form-control">
+                            <option id="kategorija0">Vse kategorije</option>
+                            <option id="kategorija1">Hrana</option>
+                            <option id="kategorija2">Drugo</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div id="search_container" class="form-group col-md-6">
+                        Išči
+                        <input type="text" class="form-control">
+                        <button id="search_btn" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="table-bordered">
+                <table class="table header-fixed">
+                    <thead>
+                    <th>Datum</th>
+                    <th>Ime</th>
+                    <th>Kategorija</th>
+                    <th>Sprememba</th>
+                    <th>Sklad</th>
+                    <th>Uporabnik</th>
+                    </thead>
+                    <tbody id="tabela_body">
+                        <tr class="prihodek">
+                            <td>11.11.2015</td>
+                            <td>Vplačilo</td>
+                            <td>Vplačilo</td>
+                            <td>10€</td>
+                            <td>10€</td>
+                            <td class="user-tabela">
+                                <a href="mojProfil.html" class="btn-user form-control">
+                                    asterix2 <img src="asterix2_small.jpg" class="img-circle img-tabela">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="prihodek">
+                            <td>11.11.2015</td>
+                            <td>Vplačilo</td>
+                            <td>Vplačilo</td>
+                            <td>10€</td>
+                            <td>20€</td>
+                            <td class="user-tabela">
+                                <a href="tujProfil.html" class="btn-user form-control">
+                                    cveto2010<img src="cveto2010_small.jpg" class="img-circle img-tabela">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="zalozeno">
+                            <td>12.11.2015</td>
+                            <td>Kruh in salama</td>
+                            <td>Hrana</td>
+                            <td>-15€</td>
+                            <td>20€</td>
+                            <td class="user-tabela">
+                                <a href="mojProfil.html" class="btn-user form-control">
+                                    asterix2 <img src="asterix2_small.jpg" class="img-circle img-tabela">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="odhodek">
+                            <td>12.11.2015</td>
+                            <td>Vzel iz sklada</td>
+                            <td>Povračilo</td>
+                            <td>-15€</td>
+                            <td>5€</td>
+                            <td class="user-tabela">
+                                <a href="mojProfil.html" class="btn-user form-control">
+                                    asterix2 <img src="asterix2_small.jpg" class="img-circle img-tabela">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="zalozeno">
+                            <td>13.11.2015</td>
+                            <td>Tankal</td>
+                            <td>Avto</td>
+                            <td>-40€</td>
+                            <td>5€</td>
+                            <td class="user-tabela">
+                                <a href="tujProfil.html" class="btn-user form-control">
+                                    cveto2010<img src="cveto2010_small.jpg" class="img-circle img-tabela">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="odhodek">
+                            <td>13.11.2015</td>
+                            <td>Vzel iz sklada</td>
+                            <td>Povračilo</td>
+                            <td>-5€</td>
+                            <td>0€</td>
+                            <td class="user-tabela">
+                                <a href="tujProfil.html" class="btn-user form-control">
+                                    cveto2010<img src="cveto2010_small.jpg" class="img-circle img-tabela">
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="mesec_container" class=" row">
+                <div class="col-md-2"></div>
+                <div class="col-md-1">
+                    <button id="mesec_levo" class="btn btn-default btn-leftRight">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </button>
+                </div>
+                <div class="col-md-6">
+                    <div class='input-group date' id='datepicker'>
+                        <input type='text' class="form-control"/>
+                            <span class="input-group-addon">
+                                <span href="" class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <button id="mesec_desno" class="btn btn-default">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </button>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+        <div id="right" class="col-md-6">
+            <article id="right_tabs" class="tabs">
+                <section id="tab_chart">
+                    <h2><a href="#tab_chart" id="tab_chart_link">Graf</a></h2>
+
+                    <div id="chart_container">
+                        <canvas id="chart" height="600px">
+                            Canvas not supported
+                        </canvas>
+                    </div>
+                </section>
+                <section id="tab_stats">
+                    <h2><a href="#tab_stats" id="tab_statistika_link">Statistika</a></h2>
+
+                    <div id="statistika_container">
+                        <h3 class="statistika-maintitle">Skupni račun 2</h3>
+                        <h5>(Račun s skupnimi stroški)</h5>
+                        <table id="statistika_tabela" class="table-statistika">
+                            <tr>
+                                <td></td>
+                                <td><h4 class="statistika_titles" id="statistika_title_m">November 2015</h4></td>
+
+                                <td><h4 class="statistika_titles" id="statistika_title_t">Skupaj</h4></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Stanje v skladu:
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_stanje">0€</div>
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_stanje_t">0€</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Stroški:
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_stroski">55€</div>
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_stroski_t">55€</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Stroški na osebo:
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_na_osebo">27.5€</div>
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_na_osebo_t">27.5€</div>
+                                </td>
+                            </tr>
+                            <tr><td class="space"></td></tr>
+                            <tr>
+                                <td class="line"></td>
+                                <td class="line"></td>
+                                <td class="line"></td>
+                            </tr>
+                            <tr><td class="space"></td></tr>
+                            <tr>
+                                <td class="form-inline">
+                                    Uporabnik
+                                    <a href="mojProfil.html" class="btn-user form-control">
+                                        asterix2 <img src="asterix2_small.jpg" class="img-circle img-tabela">
+                                    </a>
+                                    :
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="form-inline">
+                                    Zalozil:
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_zalozil_user0">15€</div>
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_zalozil_user0_t">15€</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Prispeval v sklad:
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_prispevek_user0">10€</div>
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_prispevek_user0_t">10€</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Povrnjeno:
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_povrnjeno_user0">15€</div>
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_povrnjeno_user0_t">15€</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Nepovrnjeno:
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_nepovrnjeno_user0">0€</div>
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_nepovrnjeno_user0_t">0€</div>
+                                </td>
+                            </tr>
+                            <tr class="tr-withborder odhodek">
+                                <td>
+                                    Dolg:
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_dolg_user0">17.5€</div>
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_dolg_user0_t">17.5€</div>
+                                </td>
+                            </tr>
+                            <tr><td class="space"></td></tr>
+                            <tr>
+                                <td class="line"></td>
+                                <td class="line"></td>
+                                <td class="line"></td>
+                            </tr>
+                            <tr><td class="space"></td></tr>
+                            <tr>
+                                <td class="form-inline">
+                                    Uporabnik
+                                    <a href="tujProfil.html" class="btn-user form-control">
+                                        cveto2010<img src="cveto2010_small.jpg" class="img-circle img-tabela">
+                                    </a>
+                                    :
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="form-inline">
+                                    Zalozil:
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_zalozil_user1">40€</div>
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_zalozil_user1_t">40€</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Prispeval v sklad:
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_prispevek_user1">10€</div>
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_prispevek_user1_t">10€</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Povrnjeno:
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_povrnjeno_user1">5€</div>
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_povrnjeno_user1_t">5€</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Nepovrnjeno:
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_nepovrnjeno_user1">35€</div>
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_nepovrnjeno_user1_t">35€</div>
+                                </td>
+                            </tr>
+                            <tr class="tr-withborder prihodek">
+                                <td>
+                                    Dolg:
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_dolg_user1">-17.5€</div>
+                                </td>
+                                <td>
+                                    <div class="statistika_stevilke" id="statistika_dolg_user1_t">-17.5€</div>
+                                </td>
+                            </tr>
+                            <tr><td class="space"></td></tr>
+                            <tr>
+                                <td class="line"></td>
+                                <td class="line"></td>
+                                <td class="line"></td>
+                            </tr>
+                            <tr><td class="space"></td></tr>
+                        </table>
+                        <br/>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </div>
+
+</div>
+<br/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+
+<script src="js/mainSkupniStroski.js"></script>
+<script src="js/Chart.js"></script>
+
+</body>
+</html>
