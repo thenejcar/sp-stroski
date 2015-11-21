@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SP Stroški</title>
 
-    <link href="css/bootstrap.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.min.css"
           rel="stylesheet" type="text/css"/>
-    <link href="css/mainScreen.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/urediRacun.css" rel="stylesheet">
     <link rel="icon" href="../../favicon.ico">
 
 </head>
@@ -17,8 +17,7 @@
 <nav id="main_navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container-full">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -35,7 +34,7 @@
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="mojProfil.html"> Moj Profil</a></li>
+                        <li><a href="mojProfil.html">Moj profil</a></li>
                         <li class="divider"></li>
                         <li><a href="index.html">Odjava</a></li>
                     </ul>
@@ -43,25 +42,74 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="mainScreen.html#tab_stats">Nazaj na pregled računa</a>
+                    <a href="mainScreen.html#tab_stats">Nazaj na pregled</a>
                 </li>
             </ul>
-        </div>
-        <!--/.nav-collapse -->
+        </div><!--/.nav-collapse -->
     </div>
 </nav>
 
 <div class="container-full">
-    //TODO: urejanje vnosa
+    <div class="row">
+        <div id="left" class="col-md-4">
+            <div id="opis">
+                <h3>Urejanje Vnosa</h3><br/>Vnesite podatke.
+            </div>
+        </div>
+        <div id="right" class="col-md-8">
+            <form id="form" role="form">
+                <div id="container_ime" class="form-group">
+                    Ime vnosa
+                    <input type="text" id="vnos_ime" placeholder="Ime vnosa" class="form-control"/>
+                </div>
+                <div id="container_datum" class="form-group">
+                    Datum
+                    <div class='input-group date' id='datepicker'>
+                        <input id="datepicker_input" type='text' class="form-control"/>
+                                <span class="input-group-addon">
+                                    <span href="" class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                    </div>
+                </div>
+
+                <div id="container_kategorija" class="form-group">
+                    Kategorija
+                    <input id="vnos_kategorija" class="form-control" type="text" list="kategorije">
+                    <datalist id="kategorije">
+                        <option value="Hrana">
+                        <option value="Drugo">
+                    </datalist>
+                </div>
+                <div id="container_vrednost" class="form-group">
+                    Vrednost
+                    <input type="number" id="vnos_vrednost" class="form-control"/>
+                </div>
+
+                <div id="container_buttons" class="form-group">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button type="submit" value="vnos_submit" id="vnos_submit" class="btn-default form-control">Shrani</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" id="vnos_delete" value="vnos_delete" class="btn-default form-control">Izbriši vnos</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="reset" id="vnos_reset" class="btn-default form-control">Počisti</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="button" id="vnos_cancel" class="btn-default form-control">Prekliči</button>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
-<br/>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
-
-<script src="js/profile.js"></script>
-<script src="js/Chart.js"></script>
-
+<script src="js/bootstrap.min.js"></script>
+<script src="js/urediVnos.js"></script>
 </body>
 </html>

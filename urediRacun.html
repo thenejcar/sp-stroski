@@ -40,7 +40,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="mainScreen.html">Nazaj na pregled</a>
+                    <a href="mainScreen.html#tab_stats">Nazaj na pregled</a>
                 </li>
             </ul>
         </div><!--/.nav-collapse -->
@@ -63,9 +63,9 @@
                 <div id="container_tip" class="form-group">
                     Tip računa
                     <select id="racun_tip" class="form-control ">
-                        <option id="racun_tip_navaden" onclick="izbranTip('navaden')">Navaden račun</option>
-                        <option id="racun_tip_prihodki" onclick="izbranTip('prihodki')">Skupni prihodki</option>
-                        <option id="racun_tip_odhodki" onclick="izbranTip('odhodki')">Skupni odhodki</option>
+                        <option id="racun_tip_navaden" value="navaden">Navaden račun</option>
+                        <option id="racun_tip_prihodki" value="prihodki">Skupni prihodki</option>
+                        <option id="racun_tip_odhodki" value="odhodki">Skupni odhodki</option>
                     </select>
                 </div>
                 <div id="container_valuta" class="form-group">
@@ -77,12 +77,33 @@
                     <input type="number" id="racun_zacetnostanje" class="form-control"/>
                 </div>
                 <div id="container_users" >
-
+                    Uporabniki računa
+                    <table class="form-group">
+                        <tr>
+                            <td class="form-inline container-user">
+                                <input type="checkbox" value="user_me" checked="true">
+                                <a href="mojProfil.html" class="btn-user form-control">
+                                    asterix2 <img src="asterix2_small.jpg" class="img-circle img-user">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="form-inline container-user">
+                                <input type="checkbox" value="user_1">
+                                <a href="tujProfil.html" class="btn-user form-control">
+                                    cveto2010 <img src="cveto2010_small.jpg" class="img-circle img-user">
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
                 <div id="container_buttons" class="form-group">
                     <div class="row">
-                        <div class="col-md-6">
-                            <button type="submit" id="racun_submit" class="btn-default form-control">Shrani</button>
+                        <div class="col-md-3">
+                            <button type="submit" value="racun_submit" id="racun_submit" class="btn-default form-control">Shrani</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" id="racun_delete" value="racun_delete" class="btn-default form-control">Izbriši račun</button>
                         </div>
                         <div class="col-md-3">
                             <button type="reset" id="racun_reset" class="btn-default form-control">Počisti vnose</button>

@@ -1,22 +1,5 @@
 var t = "navaden";
 
-function izbranTip(tip)
-{
-    console.log("izbran tip: "+tip);
-    t = tip;
-    if(tip == "navaden")
-    {
-        //TODO: skrij dodajanje uporabnikov
-    }
-    else
-    {
-        $("#container_users").addClass("form-group");
-        $("#container_users").html("<ul role='menu' class='list-group form-group'>" +
-            "<li class='form-control'><input type='checkbox'>Uporabnik1</li>" +
-            "</ul>")
-    }
-}
-
 function izpisiOpis(arg)
 {
     if(arg == "tip")
@@ -34,17 +17,25 @@ function izpisiOpis(arg)
             "<h3>Začetno stanje: </h3><br/> Stanje na računu ob odprtju."
         );
     }
-    else if(arg == "uporabniki" && tip == "prihodki")
+    else if(arg == "uporabniki" && t == "prihodki")
     {
         $("#opis").html(
-            "<h3>Uporabniki: </h3><br/> Izbrani uporabniki bodo lahko prispeval denar v račun ali ga iz njega jemali."
+            "<h3>Uporabniki: </h3><br/> Izbrani uporabniki bodo lahko prispevali denar v račun" +
+            " ali ga iz njega jemali."
         );
     }
-    else if(arg == "uporabniki" && tip == "odhodki")
+    else if(arg == "uporabniki" && t == "odhodki")
     {
         $("#opis").html(
             "<h3>Uporabniki: </h3><br/> Izberi uporabnike, ki imajo dostop do računa." +
             " Vsak izbran uporabnik bo prispeval v denar v račun iz katerega se bodo plačevali skupni stroški."
+        );
+    }
+    else if(arg == "valuta")
+    {
+        $("#opis").html(
+            "<h3>Valuta: </h3><br/> Izberi valuto, ki se bo uporabljala pri tem računu." +
+            " Valuta je lahko poljuben niz znakov (npr. €, $, £ ali pa kar evro, dolar, ...)"
         );
     }
     else
@@ -77,6 +68,10 @@ $(document).ready(function() {
     {
         izpisiOpis()
     });
+    $("#container_users").mouseover(function ()
+    {
+        izpisiOpis("uporabniki")
+    });
 
     //mouseleave - pocisti opis
     $("#form").mouseleave(function ()
@@ -96,4 +91,23 @@ $(document).ready(function() {
     {
         izpisiOpis("zacetnostanje");
     });
+
+    $("#racun_tip_navaden").click(function(){izbranTip("navaden")});
+    $("#racun_tip_prihodki").click(function(){izbranTip("prihodki")});
+    $("#racun_tip_odhodki").click(function(){izbranTip("odhodki")});
+
+    function izbranTip(tip)
+    {
+        console.log("izbran tip: "+tip);
+        t = tip;
+        if(tip == "navaden")
+        {
+            $("#container_users").hide();
+        }
+        else
+        {
+            $("#container_users").show();
+        }
+    }
+
 });
