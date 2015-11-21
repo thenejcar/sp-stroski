@@ -26,6 +26,17 @@ function izpisiOpis(arg)
             "<h3>Vrednost: </h3><br/> Vnesite številsko vrednost vnosa. Če je vnos odhodek, naj bo število negativno"
         );
     }
+    else if(arg == "vrsta")
+    {
+        $("#opis").html(
+            "<h3>Vrsta: </h3><br/> Vnesite vrsto vnosa - Vplačilo, povračilo ali strošek<ul>" +
+            "<li>Vplačilo: to opcijo izberete, ko prispevate denar v skupni sklad</li>"+
+            "<li>Povračilo: to opcijo izberete, ko vzamete denar iz skupnega sklada</li>"+
+            "<li>Strošek: to opcijo izberete, ko plačate nek skupni strošek. " +
+            "Pri tej opciji je treba označiti tudi, ali ste strošek kriti iz svojega denarja ali" +
+            " ste denar že vzeli iz sklada (v tem primeru vam ni treba nato posebej vnašati še povračila)</li>"
+        );
+    }
     else
     {
         $("#opis").html(
@@ -66,6 +77,10 @@ $(document).ready(function() {
     {
         izpisiOpis()
     });
+    $("#container_vrsta").mouseover(function()
+    {
+        izpisiOpis("vrsta")
+    });
 
     //mouseleave - pocisti opis
     $("#form").mouseleave(function ()
@@ -75,6 +90,10 @@ $(document).ready(function() {
     $("#vnos_ime").focus(function ()
     {
         izpisiOpis("ime");
+    });
+    $("#vnos_vrsta").focus(function ()
+    {
+        izpisiOpis("vrsta");
     });
     $("#vnos_vrednost").focus(function ()
     {
@@ -104,4 +123,21 @@ $(document).ready(function() {
     {
         izpisiOpis();
     });
+
+    // vnosStroski
+    $("#vnos_vrsta_vplacilo").click(function(){
+        $("#container_kategorija_strosek").hide();
+        $("#container_strosek_vir").hide();
+        //TODO: kategorija="Vplačilo"
+    });
+    $("#vnos_vrsta_povracilo").click(function(){
+        $("#container_kategorija_strosek").hide();
+        $("#container_strosek_vir").hide();
+        //TODO: kategorija="Povračilo"
+    });
+    $("#vnos_vrsta_strosek").click(function(){
+        $("#container_kategorija_strosek").show();
+        $("#container_strosek_vir").show();
+    });
 });
+

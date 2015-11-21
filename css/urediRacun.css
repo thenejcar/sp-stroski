@@ -210,4 +210,10 @@ table
     padding : 8px;
 }
 
+#container_kategorija_strosek,
+#container_strosek_vir
+{
+    display: none;
+}
+
 
