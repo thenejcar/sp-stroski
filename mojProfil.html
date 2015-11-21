@@ -8,7 +8,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.min.css"
           rel="stylesheet" type="text/css"/>
-    <link href="css/mainScreen.css" rel="stylesheet">
+    <link href="css/profil.css" rel="stylesheet">
     <link rel="icon" href="../../favicon.ico">
 
 </head>
@@ -52,16 +52,39 @@
 </nav>
 
 <div class="container-full">
-    TUKAJ PRIDE PROFIL
+    <div id="profil_right" class="col-md-6">
+        <img id="profilna_slika" class="img-responsive width_slika" src="asterix2_big.jpg">
+    </div>
+    <div id="profil_left" class="col-md-6">
+        <h2>asterix2</h2>
+        <h4>Ime</h4>
+        <div id="uporabnik_ime" class="text-bordered">
+            Linda
+        </div><br/>
+        <h4>Priimek</h4>
+        <div id="uporabnik_priimek" class="text-bordered">
+            Maca
+        </div><br/>
+        <h4>Moji računi</h4>
+        <div id="uporabnik_racuni" class="form-inline">
+            <ul id="moji_racuni">
+                <li><a class="btn btn-default form-control" href="mainScreen.html#tab_stats">Račun 1</a></li>
+                <li><a class="btn btn-default form-control" href="mainSkupniPrihodki.html#tab_stats">Skupni račun 1</a></li>
+                <li><a class="btn btn-default form-control" href="mainSkupniStroski.html#tab_stats">Skupni Račun 2</a></li>
+            </ul>
+        </div><br/>
+        <div class="row">
+            <div class="col-md-6">
+                <a id="profil_uredi" href="urediProfil.html" class="btn btn-default form-control">Uredi profil</a>
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
 </div>
 <br/>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
-
-<script src="js/profile.js"></script>
-<script src="js/Chart.js"></script>
-
 </body>
 </html>

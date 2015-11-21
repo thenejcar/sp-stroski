@@ -53,30 +53,54 @@
 
 <div class="container-full">
     <div id="profil_right" class="col-md-6">
-        <img id="profilna_slika" class="img-responsive width_slika" src="cveto2010_big.jpg">
+        <img id="profilna_slika" class="img-responsive width_slika" src="asterix2_big.jpg">
+        <div id="container_slika" class="form-group width_slika">
+            Slika<br/>
+            <span id="profil_image_upload_span" class="btn btn-default btn-file form-control">
+                <input id="profil_image_upload" type="file"/>
+            </span>
+        </div>
     </div>
     <div id="profil_left" class="col-md-6">
-        <h2>cveto2010</h2>
-        <h4>Ime</h4>
-        <div id="uporabnik_ime" class="text-bordered">
-            Miki
-        </div><br/>
-        <h4>Priimek</h4>
-        <div id="uporabnik_priimek" class="text-bordered">
-            Macor
-        </div><br/>
-        <h4>Skupni računi</h4>
-        <div id="uporabnik_racuni" class="form-inline">
-            <ul id="skupni_racuni">
-                <li><a class="btn btn-default form-control" href="mainSkupniPrihodki.html#tab_stats">Skupni račun 1</a></li>
-                <li><a class="btn btn-default form-control" href="mainSkupniStroski.html#tab_stats">Skupni Račun 2</a></li>
-            </ul>
-        </div>
+        <h2>Uredi profil</h2>
+        <form id="form" role="form">
+            <div id="container_ime" class="form-group">
+                Ime
+                <input type="text" id="uporabnik_ime" placeholder="Ime" class="form-control"/>
+            </div>
+            <div id="container_priimek" class="form-group">
+                Priimek
+                <input type="text" id="uporabnik_priimek" placeholder="Priimek" class="form-control"/>
+            </div>
+            <div id="container_username" class="form-group">
+                Uporabnisko ime
+                <input type="text" id="uporabnik_username" placeholder="Uporabnisko ime" class="form-control"/>
+            </div>
+            <div id="container_password" class="form-group">
+                Geslo
+                <input type="text" id="uporabnik_password" placeholder="Geslo" class="form-control"/>
+            </div>
+            <div id="container_password_repeat" class="form-group">
+                Ponovi geslo
+                <input type="text" id="uporabnik_password_repeat" placeholder="Ponovi geslo" class="form-control"/>
+            </div>
+            <div id="container_buttons" class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="submit" id="profil_submit" class="btn-default form-control">Shrani</button>
+                    </div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3"></div>
+                </div>
+
+            </div>
+        </form>
     </div>
 </div>
 <br/>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/profile.js"></script>
 </body>
 </html>

@@ -25,7 +25,6 @@ body
 {
     padding: 4px;
 }
-
 .navbar
 {
     background: #4caf50;
@@ -43,18 +42,15 @@ body
 {
     color:#0f0f0f;
 }
-
 .navbar .nav > li > a:hover
 {
     color:#0f0f0f;
     background: #81c784;
 }
-
 .navbar .nav > li > a:active
 {
     color:#0f0f0f;
 }
-
 .navbar .nav > li > ul, .navbar .nav > li > ul > li
 {
     background: #81c784;
@@ -65,7 +61,6 @@ body
     background: #81c784;
     color:#0f0f0f;
 }
-
 .nav > li > a
 {
     color: #4caf50;
@@ -75,16 +70,69 @@ body
 {
     border-radius: 0;
 }
-
 .form-control:focus
 {
     border-color: #4caf50;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(30, 69, 31, 0.6);
 }
-
 .btn:hover
 {
 
     border-color: #4caf50;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.030), 0 0 8px rgba(30, 69, 31, 0.6);
 }
+.form-group:hover, .form-group:focus
+{
+    background: #81c784;
+}
+
+.form-group
+{
+    padding: 4px
+}
+
+
+.width_slika
+{
+    width: 80%;
+}
+#profilna_slika
+{
+    height: 80%;
+}
+#container_slika
+{
+    margin-top: 10px;
+}
+
+.text-bordered
+{
+    border: 1px solid #d0d0d0;
+    font-size: large;
+    color: #0f0f0f;
+    text-align: left;
+
+    padding: 4px;
+    margin: 4px;
+}
+
+.form-control
+{
+    margin: 2px;
+}
+.form-control:focus,
+.form-control:hover
+{
+    border-color: #4caf50;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(30, 69, 31, 0.6);
+}
+.btn:hover,
+.btn:focus
+{
+
+    border-color: #4caf50;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.030), 0 0 8px rgba(30, 69, 31, 0.6);
+}
+
+
+
