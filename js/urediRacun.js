@@ -38,6 +38,15 @@ function izpisiOpis(arg)
             " Valuta je lahko poljuben niz znakov (npr. €, $, £ ali pa kar evro, dolar, ...)"
         );
     }
+    else if(arg == "cilji")
+    {
+        $("#opis").html(
+            "<h3>Cilji: </h3><br/> Izberi cilje, ki jim želiš slediti v tem računu. " +
+            "Izbrati je potrebno tip cilja (Prihranek, minimalna vsota prihodkov ali maksimalna vsota odhodkov)" +
+            ", vrednost cilja in časovno obdobje, v katerem želiš cilj doseči."
+
+        );
+    }
     else
     {
         $("#opis").html(
@@ -47,6 +56,28 @@ function izpisiOpis(arg)
 }
 
 $(document).ready(function() {
+    //datepickerji za cilje
+    $("#datepicker_od").datepicker(
+        {
+            format: "dd MM yyyy",
+            autoclose: true
+        }).datepicker("update", new Date()).on('changeDate', function ()
+        {
+            console.log("Date 'od' changed")
+        });
+
+    $("#datepicker_do").datepicker(
+        {
+            format: "dd MM yyyy",
+            autoclose: true
+        }).datepicker("update", new Date()).on('changeDate', function ()
+        {
+            console.log("Date 'do' changed")
+        });
+
+
+
+
     //mouseover - opis za vsako polje
     $("#container_ime").mouseover(function ()
     {
@@ -72,6 +103,10 @@ $(document).ready(function() {
     {
         izpisiOpis("uporabniki")
     });
+    $("#container_cilji").mouseover(function()
+    {
+        izpisiOpis("cilji");
+    })
 
     //mouseleave - pocisti opis
     $("#form").mouseleave(function ()
@@ -91,6 +126,10 @@ $(document).ready(function() {
     {
         izpisiOpis("zacetnostanje");
     });
+    $("#container_cilji").focus(function()
+    {
+        izpisiOpis("cilji");
+    })
 
     $("#racun_tip_navaden").click(function(){izbranTip("navaden")});
     $("#racun_tip_prihodki").click(function(){izbranTip("prihodki")});

@@ -53,8 +53,8 @@ $(document).ready(function() {
             autoclose: true
         }).datepicker("update", new Date()).on('changeDate', function ()
     {
-        console.log("picked "+ datepicker.getDate())
-    })
+        console.log("Date changed")
+    });
 
     //mouseover - opis za vsako polje
     $("#container_ime").mouseover(function ()
@@ -125,19 +125,44 @@ $(document).ready(function() {
     });
 
     // vnosStroski
+    /*
     $("#vnos_vrsta_vplacilo").click(function(){
         $("#container_kategorija_strosek").hide();
         $("#container_strosek_vir").hide();
-        //TODO: kategorija="Vplačilo"
     });
     $("#vnos_vrsta_povracilo").click(function(){
         $("#container_kategorija_strosek").hide();
         $("#container_strosek_vir").hide();
-        //TODO: kategorija="Povračilo"
+
     });
     $("#vnos_vrsta_strosek").click(function(){
         $("#container_kategorija_strosek").show();
         $("#container_strosek_vir").show();
+    });
+    */
+    $("#vnos_vrsta").change(function()
+    {
+       var izbrana_vrsta = $(this).val();
+        switch(izbrana_vrsta)
+        {
+            case "povracilo":
+                $("#container_kategorija_strosek").hide();
+                $("#container_strosek_vir").hide();
+                //TODO: kategorija="Povračilo"
+                break;
+            case "vplacilo":
+                $("#container_kategorija_strosek").hide();
+                $("#container_strosek_vir").hide();
+                //TODO: kategorija="Vplačilo"
+                break;
+            case "strosek":
+                $("#container_kategorija_strosek").show();
+                $("#container_strosek_vir").show();
+                break;
+            default:
+                //do nothin
+
+        }
     });
 });
 

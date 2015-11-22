@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SP Stroški</title>
-
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.min.css"
+          rel="stylesheet" type="text/css"/>
     <link href="css/urediRacun.css" rel="stylesheet">
     <link rel="icon" href="../../favicon.ico">
 
@@ -97,6 +98,59 @@
                         </tr>
                     </table>
                 </div>
+                <div id="container_cilji" class="row">
+                    <div id="cilji_left" class="col-md-4">
+                        Cilji
+                        <ul id="cilji">
+                            <li id="cilj0">
+                                Prihrani vsaj 10€ <p>od 1.11.2015 do 30.11.2015</p>
+                            </li>
+                            <li id="cilj1">
+                                Prihrani vsaj 100€ <p>od 1.1.2015 do 31.13.2015</p>
+                            </li>
+                            <li id="cilj2">
+                                Prihodki vsaj 1000€ <p>od 1.1.2015 do 31.12.2015</p>
+                            </li>
+                            <li id="cilj3">
+                                Odhodki manj kot 100€ <p>od 1.1.2015 do 30.11.2015</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="cilji_right" class="col-md-8">
+                        <div class="form-group">
+                            Tip cilja
+                            <select id="cilji_tip" class="form-control ">
+                                <option id="cilji_tip_prihranek" value="prihranek">Prihrani vsaj</option>
+                                <option id="cilji_tip_prihodki" value="prihodki">Prihodki vsaj</option>
+                                <option id="cilji_tip_odhodki" value="odhodki">Odhodki manj kot</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            Vrednost
+                            <input type="number" id="cilji_vrednost" class="form-control" placeholder="vrednost"/>
+                        </div>
+                        <div class="form-group">
+
+                            <div id="od_do_container" class="form-inline">
+                                Od
+                                <div class='input-group date datepicker' id='datepicker_od'>
+                                    <input id="datepicker_input_od" type='text' class="form-control"/>
+                                    <span class="input-group-addon">
+                                        <span href="" class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                                Do
+                                <div class='input-group date datepicker' id='datepicker_do'>
+                                    <input id="datepicker_input_do" type='text' class="form-control"/>
+                                    <span class="input-group-addon">
+                                        <span href="" class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br/>
                 <div id="container_buttons" class="form-group">
                     <div class="row">
                         <div class="col-md-3">
@@ -120,6 +174,7 @@
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/urediRacun.js"></script>
 </body>
