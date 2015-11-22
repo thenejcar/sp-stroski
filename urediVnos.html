@@ -29,7 +29,7 @@
             <ul class="nav navbar-nav">
                 <li class="dropdown">
                     <a id="main_user_dropdown" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img id="main_user_avatar" src="asterix2_small.jpg" class="img-circle">
+                        <img id="main_user_avatar" src="asterix2_small.jpg" alt="Avatar uporabnika asterix2" class="img-circle">
                         asterix2
                         <span class="caret"></span>
                     </a>
@@ -57,7 +57,7 @@
             </div>
         </div>
         <div id="right" class="col-md-8">
-            <form id="form" role="form">
+            <form id="form">
                 <div id="container_ime" class="form-group">
                     Ime vnosa
                     <input type="text" id="vnos_ime" placeholder="Ime vnosa" class="form-control"/>
@@ -67,7 +67,7 @@
                     <div class='input-group date datepicker' id='datepicker'>
                         <input id="datepicker_input" type='text' class="form-control"/>
                         <span class="input-group-addon">
-                            <span href="" class="glyphicon glyphicon-calendar"></span>
+                            <span class="glyphicon glyphicon-calendar"></span>
                         </span>
                     </div>
                 </div>
@@ -76,8 +76,8 @@
                     Kategorija
                     <input id="vnos_kategorija" class="form-control" type="text" list="kategorije">
                     <datalist id="kategorije">
-                        <option value="Hrana">
-                        <option value="Drugo">
+                        <option value="Hrana">Hrana</option>
+                        <option value="Drugo">Drugo</option>
                     </datalist>
                 </div>
                 <div id="container_vrednost" class="form-group">

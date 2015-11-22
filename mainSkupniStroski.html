@@ -30,7 +30,7 @@
             <ul class="nav navbar-nav">
                 <li class="dropdown">
                     <a id="main_user_dropdown" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img id="main_user_avatar" src="asterix2_small.jpg" class="img-circle">
+                        <img id="main_user_avatar" src="asterix2_small.jpg" alt="Avatar uporabnika asterix2" class="img-circle">
                         asterix2
                         <span class="caret"></span>
                     </a>
@@ -98,12 +98,14 @@
             <div class="table-bordered">
                 <table class="table header-fixed">
                     <thead>
+                    <tr>
                     <th>Datum</th>
                     <th>Ime</th>
                     <th>Kategorija</th>
                     <th>Sprememba</th>
                     <th>Sklad</th>
                     <th>Uporabnik</th>
+                    </tr>
                     </thead>
                     <tbody id="tabela_body">
                         <tr class="prihodek">
@@ -114,7 +116,7 @@
                             <td>10€</td>
                             <td class="user-tabela">
                                 <a href="mojProfil.html" class="btn-user form-control">
-                                    asterix2 <img src="asterix2_small.jpg" class="img-circle img-tabela">
+                                    asterix2 <img src="asterix2_small.jpg" alt="Avatar uporabnika asterix2" class="img-circle img-tabela">
                                 </a>
                             </td>
                         </tr>
@@ -126,7 +128,7 @@
                             <td>20€</td>
                             <td class="user-tabela">
                                 <a href="tujProfil.html" class="btn-user form-control">
-                                    cveto2010<img src="cveto2010_small.jpg" class="img-circle img-tabela">
+                                    cveto2010<img src="cveto2010_small.jpg" alt="Avatar uporabnika cveto2010" class="img-circle img-tabela">
                                 </a>
                             </td>
                         </tr>
@@ -138,7 +140,7 @@
                             <td>20€</td>
                             <td class="user-tabela">
                                 <a href="mojProfil.html" class="btn-user form-control">
-                                    asterix2 <img src="asterix2_small.jpg" class="img-circle img-tabela">
+                                    asterix2 <img src="asterix2_small.jpg" alt="Avatar uporabnika asterix2" class="img-circle img-tabela">
                                 </a>
                             </td>
                         </tr>
@@ -150,7 +152,7 @@
                             <td>5€</td>
                             <td class="user-tabela">
                                 <a href="mojProfil.html" class="btn-user form-control">
-                                    asterix2 <img src="asterix2_small.jpg" class="img-circle img-tabela">
+                                    asterix2 <img src="asterix2_small.jpg" alt="Avatar uporabnika asterix2" class="img-circle img-tabela">
                                 </a>
                             </td>
                         </tr>
@@ -162,7 +164,7 @@
                             <td>5€</td>
                             <td class="user-tabela">
                                 <a href="tujProfil.html" class="btn-user form-control">
-                                    cveto2010<img src="cveto2010_small.jpg" class="img-circle img-tabela">
+                                    cveto2010<img src="cveto2010_small.jpg" alt="Avatar uporabnika cveto2010" class="img-circle img-tabela">
                                 </a>
                             </td>
                         </tr>
@@ -174,7 +176,7 @@
                             <td>0€</td>
                             <td class="user-tabela">
                                 <a href="tujProfil.html" class="btn-user form-control">
-                                    cveto2010<img src="cveto2010_small.jpg" class="img-circle img-tabela">
+                                    cveto2010<img src="cveto2010_small.jpg" alt="Avatar uporabnika cveto2010" class="img-circle img-tabela">
                                 </a>
                             </td>
                         </tr>
@@ -192,7 +194,7 @@
                     <div class='input-group date' id='datepicker'>
                         <input type='text' class="form-control"/>
                             <span class="input-group-addon">
-                                <span href="" class="glyphicon glyphicon-calendar"></span>
+                                <span class="glyphicon glyphicon-calendar"></span>
                             </span>
                     </div>
                 </div>
@@ -210,7 +212,7 @@
                     <h2><a href="#tab_chart" id="tab_chart_link">Graf</a></h2>
 
                     <div id="chart_container">
-                        <canvas id="chart" height="500px">
+                        <canvas id="chart" height="500">
                             Canvas not supported
                         </canvas>
                     </div>
@@ -261,21 +263,21 @@
                                     <div class="statistika_stevilke" id="statistika_na_osebo_t">27.5€</div>
                                 </td>
                             </tr>
-                            <tr><td class="space"></td></tr>
+                            <tr><td class="space"></td><td></td><td></td></tr>
                             <tr>
                                 <td class="line"></td>
                                 <td class="line"></td>
                                 <td class="line"></td>
                             </tr>
-                            <tr><td class="space"></td></tr>
+                            <tr><td class="space"></td><td></td><td></td></tr>
                             <tr>
                                 <td class="form-inline">
                                     Uporabnik
                                     <a href="mojProfil.html" class="btn-user form-control">
-                                        asterix2 <img src="asterix2_small.jpg" class="img-circle img-tabela">
+                                        asterix2 <img src="asterix2_small.jpg" alt="Avatar uporabnika asterix2" class="img-circle img-tabela">
                                     </a>
                                     :
-                                </td>
+                                </td><td></td><td></td>
                             </tr>
                             <tr>
                                 <td class="form-inline">
@@ -332,21 +334,21 @@
                                     <div class="statistika_stevilke" id="statistika_dolg_user0_t">17.5€</div>
                                 </td>
                             </tr>
-                            <tr><td class="space"></td></tr>
+                            <tr><td class="space"></td><td></td><td></td></tr>
                             <tr>
                                 <td class="line"></td>
                                 <td class="line"></td>
                                 <td class="line"></td>
                             </tr>
-                            <tr><td class="space"></td></tr>
+                            <tr><td class="space"></td><td></td><td></td></tr>
                             <tr>
                                 <td class="form-inline">
                                     Uporabnik
                                     <a href="tujProfil.html" class="btn-user form-control">
-                                        cveto2010<img src="cveto2010_small.jpg" class="img-circle img-tabela">
+                                        cveto2010<img src="cveto2010_small.jpg" alt="Avatar uporabnika cveto2010" class="img-circle img-tabela">
                                     </a>
                                     :
-                                </td>
+                                </td><td></td><td></td>
                             </tr>
                             <tr>
                                 <td class="form-inline">
@@ -403,13 +405,13 @@
                                     <div class="statistika_stevilke" id="statistika_dolg_user1_t">-17.5€</div>
                                 </td>
                             </tr>
-                            <tr><td class="space"></td></tr>
+                            <tr><td class="space"></td><td></td><td></td></tr>
                             <tr>
                                 <td class="line"></td>
                                 <td class="line"></td>
                                 <td class="line"></td>
                             </tr>
-                            <tr><td class="space"></td></tr>
+                            <tr><td class="space"></td><td></td><td></td></tr>
                         </table>
                         <br/>
                     </div>
